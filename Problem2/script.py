@@ -44,9 +44,9 @@ for i in range(16):
         v1, v2 = K1702[i].replace('X', '0'), K1702[i].replace('X', '1')
         v1, v2 = tuple(map(int, v1)), tuple(map(int, v2))
         if v1 in output:
-            K1703[i] = ''.join(str(x) for x in output[v1][0])
+            K1703[i] = ''.join(str(x) for x in calc(*v1))
         elif v2 in output:
-            K1703[i] = ''.join(str(x) for x in output[v2][0])
+            K1703[i] = ''.join(str(x) for x in calc(*v2))
         else:
             raise ValueError("No solution found")
     elif K1703[i].count('X') == 1:
