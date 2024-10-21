@@ -58,7 +58,7 @@ class Generator:
     def _clock(self): 
         return self._clock_A() ^ self._clock_B()
 
-key_stream = f.read().strip()
+key_stream = open('./keystream.txt', 'r').read().strip()
 g = Generator(state_A, state_B)
 k = ''
 
